@@ -1,0 +1,29 @@
+### References
+
+---
+
+Tools and resources we have used for this project are
+
+**-Ltspice software (Analog Devices)** 
+
+*All the data for charactersitic behaviour are generated from ltspice simulation*
+
+**-Qt Designer Software**
+
+*Enabled us to generate GUI script and display on screen from python interpreter.*
+
+**-Ltspy3** 
+
+Open source code that decode the binary data which is genereted from ltspice executable and dumped the gathered data as numpy array to desired variable.
+
+**-Numpy and Matplotlib**
+
+Allowed us to do accurate and convinent matrix calculations as well as display the data on graphs.
+
+**-Sedra Smith MicroElectronic Circuits**
+
+Gathered reliable and accurate information about power electronic components.
+
+**-Danial Hart Power Electronic Circuits**
+
+Gathered reliable and accurate information about power electronic circuits and components.

@@ -31,7 +31,6 @@ class myWindow(QMainWindow):
     def bjtClicked(self):
         if self.ui.comboBox_BJT.currentText() == 'Graph':
             time_ref,vce,vbe,ic_current = ltspice_interface.extract_var("BJT")
-            
             figure = Figure()
             scene = QtWidgets.QGraphicsScene()
             axes = figure.gca()
@@ -50,15 +49,30 @@ class myWindow(QMainWindow):
             scene.setSceneRect(35, 40, 541, 411)
             self.ui.graphicsView_graph.fitInView(scene.sceneRect(),Qt.KeepAspectRatio)
             self.ui.graphicsView_graph.show()  
+
         elif self.ui.comboBox_BJT.currentText() == 'Circuit':
-            pix = QPixmap(os.path.dirname(__file__)+'\\BJT.png')
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\circuit_images''\\BJT.png')
             item = QtWidgets.QGraphicsPixmapItem(pix)
             scene = QtWidgets.QGraphicsScene()
             scene.addItem(item)
             self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
             self.ui.graphicsView_graph.setScene(scene)
+
+        elif self.ui.comboBox_BJT.currentText() == 'Info':
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\info_images'+'\\BJT_INFO.png')
+            item = QtWidgets.QGraphicsPixmapItem(pix)
+            scene = QtWidgets.QGraphicsScene()
+            scene.addItem(item)
+            self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
+            self.ui.graphicsView_graph.setScene(scene)
+
         else:
-            pass
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\info_images'+'\\ref.png')
+            item = QtWidgets.QGraphicsPixmapItem(pix)
+            scene = QtWidgets.QGraphicsScene()
+            scene.addItem(item)
+            self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
+            self.ui.graphicsView_graph.setScene(scene)
     
     def mosfetClicked(self):
         if self.ui.comboBox_MOSFET.currentText() == 'Graph':
@@ -82,15 +96,29 @@ class myWindow(QMainWindow):
             scene.setSceneRect(35, 40, 541, 411)
             self.ui.graphicsView_graph.fitInView(scene.sceneRect(),Qt.KeepAspectRatio)
             self.ui.graphicsView_graph.show()  
-        elif self.ui.comboBox_BJT.currentText() == 'Circuit':
-            pix = QPixmap(os.path.dirname(__file__)+'\\MOSFET.png')
+
+        elif self.ui.comboBox_MOSFET.currentText() == 'Circuit':
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\circuit_images'+'\\MOSFET.png')
             item = QtWidgets.QGraphicsPixmapItem(pix)
             scene = QtWidgets.QGraphicsScene()
             scene.addItem(item)
             self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
             self.ui.graphicsView_graph.setScene(scene)
+
+        elif self.ui.comboBox_MOSFET.currentText() == 'Info':
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\info_images'+'\\MOSFET_INFO.png')
+            item = QtWidgets.QGraphicsPixmapItem(pix)
+            scene = QtWidgets.QGraphicsScene()
+            scene.addItem(item)
+            self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
+            self.ui.graphicsView_graph.setScene(scene)           
         else:
-            pass
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\info_images'+'\\ref.png')
+            item = QtWidgets.QGraphicsPixmapItem(pix)
+            scene = QtWidgets.QGraphicsScene()
+            scene.addItem(item)
+            self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
+            self.ui.graphicsView_graph.setScene(scene)
 
     def diodeClicked(self):
         if self.ui.comboBox_Diode.currentText() == 'Graph':
@@ -109,15 +137,29 @@ class myWindow(QMainWindow):
             scene.setSceneRect(35, 40, 541, 411)
             self.ui.graphicsView_graph.fitInView(scene.sceneRect(),Qt.KeepAspectRatio)
             self.ui.graphicsView_graph.show()
-        elif self.ui.comboBox_BJT.currentText() == 'Circuit': 
-            pix = QPixmap(os.path.dirname(__file__)+'\\DIODE.png')
+
+        elif self.ui.comboBox_Diode.currentText() == 'Circuit': 
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\circuit_images''\\DIODE.png')
+            item = QtWidgets.QGraphicsPixmapItem(pix)
+            scene = QtWidgets.QGraphicsScene()
+            scene.addItem(item)
+            self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
+            self.ui.graphicsView_graph.setScene(scene)
+
+        elif self.ui.comboBox_Diode.currentText() == 'Info':
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\info_images'+'\\DIODE_INFO.png')
             item = QtWidgets.QGraphicsPixmapItem(pix)
             scene = QtWidgets.QGraphicsScene()
             scene.addItem(item)
             self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
             self.ui.graphicsView_graph.setScene(scene)
         else:
-            pass
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\info_images'+'\\ref.png')
+            item = QtWidgets.QGraphicsPixmapItem(pix)
+            scene = QtWidgets.QGraphicsScene()
+            scene.addItem(item)
+            self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
+            self.ui.graphicsView_graph.setScene(scene)
         
         self.ui.graphicsView_graph.show()
     def thyClicked(self):
@@ -137,15 +179,28 @@ class myWindow(QMainWindow):
             scene.setSceneRect(35, 40, 541, 411)
             self.ui.graphicsView_graph.fitInView(scene.sceneRect(),Qt.KeepAspectRatio)
             self.ui.graphicsView_graph.show()
-        elif self.ui.comboBox_BJT.currentText() == 'Circuit':
-            pix = QPixmap(os.path.dirname(__file__)+'\\THYRISTOR.png')
+        elif self.ui.comboBox_Thyristor.currentText() == 'Circuit':
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\circuit_images'+'\\THYRISTOR.png')
+            item = QtWidgets.QGraphicsPixmapItem(pix)
+            scene = QtWidgets.QGraphicsScene()
+            scene.addItem(item)
+            self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
+            self.ui.graphicsView_graph.setScene(scene)
+        elif self.ui.comboBox_Thyristor.currentText() == 'Info':
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\info_images'+'\\THYRISTOR_INFO.png')
             item = QtWidgets.QGraphicsPixmapItem(pix)
             scene = QtWidgets.QGraphicsScene()
             scene.addItem(item)
             self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
             self.ui.graphicsView_graph.setScene(scene)
         else:
-            pass
+            pix = QPixmap(os.path.dirname(__file__)+'\\Ltspice\\info_images'+'\\ref.png')
+            item = QtWidgets.QGraphicsPixmapItem(pix)
+            scene = QtWidgets.QGraphicsScene()
+            scene.addItem(item)
+            self.ui.graphicsView_graph.fitInView(item,Qt.KeepAspectRatio)
+            self.ui.graphicsView_graph.setScene(scene)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

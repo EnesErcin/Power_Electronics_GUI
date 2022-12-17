@@ -1,0 +1,6 @@
+BJT’s are invented in 1948 at the Bell Laboratories initated the era of solid-state circuits, which led to electronics changing the way we work, play, and infact live. The invention of the BJT also eventually led to the dominance of information technology and the emergence of the knowledge-based economy.
+
+A terminal is connected to each of the three semiconductor points of the BJT, with
+the terminals named as **emitter (E)**, **base (B)**, and **collector (C).** Depending on the bias condition ***(forward or reverse)*** of each of these junctions, transistors opperation mode changes. Opperation modes are called as Cut-Off, Saturation and Active for BJT.
+
+**Cut-off** :Logic Ciruits  || **Saturation**: Logic Ciruits, Nonlinear behavior ||  **Active**:  Amplifier Circuits

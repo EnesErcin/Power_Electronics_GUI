@@ -6,7 +6,7 @@ import numpy as np
 def extract_var(component):
 
     if component == "THYRISTOR":
-        lt_spice_raw = ltspy3.SimData(os.path.dirname(__file__)+'\\THYRISTOR.raw')
+        lt_spice_raw = ltspy3.SimData(os.path.dirname(__file__)+'\\Ltspice'+'\\THYRISTOR.raw')
         data_len = int(np.shape(lt_spice_raw.values[0])[0]) 
         time_ref = np.linspace(0,data_len,data_len)
         v_s = lt_spice_raw.values[1]
@@ -27,7 +27,7 @@ def extract_var(component):
 
 
     elif component == "BJT":
-        lt_spice= os.path.dirname(__file__)+'\\BJT.'          
+        lt_spice= os.path.dirname(__file__)+'\\Ltspice'+'\\BJT.'          
         lt_spice_raw =  lt_spice+"raw"
         lt_spice_raw =  ltspy3.SimData(lt_spice_raw)
         data_len = int(np.shape(lt_spice_raw.values[0])[1])
@@ -39,7 +39,7 @@ def extract_var(component):
         return time_ref,vce,vbe,ic
 
     elif component == "DIODE":
-        lt_spice_raw = ltspy3.SimData(os.path.dirname(__file__)+'\\DIODE.raw')
+        lt_spice_raw = ltspy3.SimData(os.path.dirname(__file__)+'\\Ltspice'+'\\DIODE.raw')
         data_len = int(np.shape(lt_spice_raw.values[0])[0]) 
         time_ref = np.linspace(0,data_len,data_len)
         vs = lt_spice_raw.values[1]
@@ -48,7 +48,7 @@ def extract_var(component):
 
 
     elif component == "MOSFET":
-        lt_spice= os.path.dirname(__file__)+'\\MOSFET.'          
+        lt_spice= os.path.dirname(__file__)+'\\Ltspice'+'\\MOSFET.'          
         lt_spice_raw =  lt_spice+"raw"
         lt_spice_raw =  ltspy3.SimData(lt_spice_raw)
         data_len = int(np.shape(lt_spice_raw.values[0])[1])
